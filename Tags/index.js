@@ -20,7 +20,7 @@ class Tags extends React.Component {
     this.setState(state =>
       ({
         tags: state.tags.slice(0, -1),
-        text: state.tags.slice(-1)[0] || " "
+        text: state.tags.slice(-1)[0] || ""
       }),
       () =>
         this.props.onChangeTags && this.props.onChangeTags(this.state.tags)
@@ -128,7 +128,7 @@ class Tags extends React.Component {
 
 Tags.defaultProps = {
   initialTags: [],
-  initialText: " ",
+  initialText: "",
   createTagOnString: [",", " "],
   createTagOnReturn: false,
   readonly: false,
